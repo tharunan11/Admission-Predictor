@@ -11,6 +11,7 @@ The Admission Chances Predictor is a tool designed to help students assess their
 - **Django (Python framework)**
 - **HTML, CSS**
 - **Linear Regression**
+- **VS Code**
 
 ## Installation
 
@@ -35,8 +36,9 @@ To run this project locally, follow these steps:
 
 ## Model Details
 
-The model used for prediction is a linear regression model trained on a dataset containing various student attributes and their corresponding admission chances.
-
+The model used for prediction is a linear regression model trained on a dataset containing various student attributes and their corresponding admission chances. Model contains features such as :
+   [GRE score, TOEFL Score, University rating, SOP, LOR, CGPA, Research]
+   Model accuracy :- 83%
 
 ## Deployment
 
