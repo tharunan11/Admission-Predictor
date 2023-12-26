@@ -8,9 +8,9 @@ The Admission Chances Predictor is a tool designed to help students assess their
 
 ## Built With
 
-- **Backend**: Django (Python framework)
-- **Frontend**: HTML, CSS
-- **Machine Learning Model**: Linear Regression
+- **Django (Python framework)**
+- **HTML, CSS**
+- **Linear Regression**
 
 ## Installation
 
@@ -25,6 +25,23 @@ To run this project locally, follow these steps:
    pip install -r requirements.txt
    python manage.py runserver
    ```
+   
+## Usage
+
+```bash
+   python manage.py runserver
+```
+- Then required fields are filled and the result is predicted in next page
+
+## Model Details
+
+The model used for prediction is a linear regression model trained on a dataset containing various student attributes and their corresponding admission chances.
+
+
+## Deployment
+
+The project is deployed and accessible at [Admission Chances Predictor](https://tharunan.pythonanywhere.com/).
+
 
 
 
