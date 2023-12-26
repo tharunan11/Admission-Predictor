@@ -18,5 +18,15 @@ To run this project locally, follow these steps:
 
 1. Clone the repository:
 
+   Create and activate a virtual environment and activate .
    ```bash
    git clone https://github.com/your_username/admission-chances-predictor.git
+   cd admission-chances-predictor
+   pip install -r requirements.txt
+   python manage.py runserver
+   ```
+
+
+
+
+
