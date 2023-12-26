@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>User Details</title>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        background-color: #f8f8f8;
+      }
+
+      .user-details-section {
+        text-align: center;
+        padding: 10% 5% 5%;
+        background-image: linear-gradient(to bottom right, #4caf50, #2196f3);
+        color: #fff;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        min-height: 100vh;
+      }
+
+      h2 {
+        font-size: 1.5em;
+        margin-bottom: 15px;
+      }
+
+      form {
+        display: grid;
+        gap: 10px;
+        justify-items: center;
+        width: 100%;
+        max-width: 400px;
+        margin: auto;
+        margin-bottom: 50px; /* Add some bottom margin */
+      }
+
+      label {
+        font-size: 1em;
+        text-align: right;
+        margin-bottom: 5px;
+      }
+
+      input[type="number"],
+      select {
+        padding: 8px;
+        font-size: 0.9em;
+        border-radius: 5px;
+        width: 90%;
+        box-sizing: border-box;
+      }
+
+      input[type="text"] {
+        padding: 8px;
+        font-size: 0.9em;
+        border-radius: 5px;
+        width: 90%;
+        box-sizing: border-box;
+      }
+
+      .submit-button {
+        padding: 8px 15px;
+        font-size: 0.9em;
+        background-color: #ffc107;
+        color: #000;
+        text-decoration: none;
+        border-radius: 8px;
+        transition: background-color 0.3s ease;
+        cursor: pointer;
+      }
+
+      .submit-button:hover {
+        background-color: #ffa000;
+      }
+
+      @media only screen and (max-width: 768px) {
+        .user-details-section {
+          padding-top: 20%;
+        }
+
+        form {
+          width: 80%;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="user-details-section">
+      <h2>Please Enter Your Details:</h2>
+      <form action="{% url 'results' %}" method="post">
+        {% csrf_token %}
+        <label for="greScore">GRE Score (/340):</label>
+        <input
+          type="number"
+          id="greScore"
+          name="greScore"
+          min="0"
+          max="340"
+          required
+        />
+        <label for="toeflScore">TOEFL Score (/120):</label>
+        <input
+          type="number"
+          id="toeflScore"
+          name="toeflScore"
+          min="0"
+          max="120"
+          required
+        />
+
+        <label for="universityRating">University Rating (/5):</label>
+        <input
+          type="text"
+          id="universityRating"
+          name="universityRating"
+          min="0"
+          max="5"
+          required
+        />
+
+        <label for="sop">Statement of Purpose (SOP) (/5):</label>
+        <input type="text" id="sop" name="sop" min="0" max="5" required />
+
+        <label for="lor">Letter of Recommendation (LOR) (/5):</label>
+        <input type="text" id="lor" name="lor" min="0" max="5" required />
+
+        <label for="cgpa">CGPA (/10):</label>
+        <input type="text" id="cgpa" name="cgpa" min="0" max="10" required />
+
+        <label for="research">Research (0/1):</label>
+        <input
+          type="number"
+          id="research"
+          name="research"
+          min="0"
+          max="1"
+          required
+        />
+
+        <input type="submit" value="Submit" class="submit-button" />
+      </form>
+    </div>
+  </body>
+</html>

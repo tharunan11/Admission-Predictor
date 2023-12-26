@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Prediction Result</title>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        background-color: #f8f8f8;
+        overflow: hidden;
+      }
+
+      .result-section {
+        text-align: center;
+        padding: 20vh 80px;
+        background-image: linear-gradient(to bottom right, #4caf50, #2196f3);
+        color: #fff;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        min-height: 100vh;
+      }
+
+      h2 {
+        font-size: 2em;
+        margin-bottom: 20px;
+      }
+
+      .prediction-value {
+        font-size: 1.5em;
+        background-color: rgba(255, 255, 255, 0.2);
+        padding: 10px 20px;
+        border-radius: 5px;
+      }
+
+      @media only screen and (max-width: 768px) {
+        .result-section {
+          padding: 20vh 40px;
+        }
+
+        h2 {
+          font-size: 1.5em;
+        }
+
+        .prediction-value {
+          font-size: 1.2em;
+          padding: 8px 16px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="result-section">
+      <h2>Prediction Result</h2>
+      <p>The predicted value is:</p>
+      <div class="prediction-value">{{ prediction }}</div>
+    </div>
+  </body>
+</html>

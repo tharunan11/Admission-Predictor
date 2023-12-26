@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Welcome</title>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        background-color: #f8f8f8;
+        overflow: hidden;
+      }
+
+      .welcome-section {
+        text-align: center;
+        padding: 20vh 80px;
+        background-image: linear-gradient(to bottom right, #4caf50, #2196f3);
+        color: #fff;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+      }
+
+      h1 {
+        font-size: 4em;
+        margin-bottom: 20px;
+      }
+
+      p {
+        font-size: 1.5em;
+        margin-bottom: 40px;
+      }
+
+      .predict-button {
+        padding: 15px 40px;
+        font-size: 1.5em;
+        background-color: #ffc107;
+        color: #000;
+        text-decoration: none;
+        border-radius: 8px;
+        transition: background-color 0.3s ease;
+        display: inline-block;
+        cursor: pointer;
+      }
+
+      .predict-button:hover {
+        background-color: #ffa000;
+      }
+
+      @media only screen and (max-width: 768px) {
+        .welcome-section {
+          padding: 20vh 40px; /* Adjusted padding for smaller screens */
+        }
+
+        h1 {
+          font-size: 3em;
+        }
+
+        p {
+          font-size: 1.2em;
+          margin-bottom: 30px;
+        }
+
+        .predict-button {
+          padding: 12px 30px;
+          font-size: 1.2em;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="welcome-section">
+      <h1>Welcome</h1>
+      <p>
+        Predict Your Odds of Securing Elite University Admission with our Tool !
+      </p>
+      <a href="user/" class="predict-button">Predict Now</a>
+    </div>
+  </body>
+</html>
